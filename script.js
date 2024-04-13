@@ -10,7 +10,7 @@ function generateTable() {
     for (var i = 0; i < rows; i++) {
         tableHTML += "<tr>";
         for (var j = 0; j < cols; j++) {
-            tableHTML += "<td>Cell</td>";
+            tableHTML += "<td>Cell " + i + j + "</td>"; 
         }
         tableHTML += "</tr>";
     }
