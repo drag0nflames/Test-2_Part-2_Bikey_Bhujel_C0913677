@@ -27,3 +27,14 @@ function addColumn() {
     }
 }
 
+// Function to add a row to the table
+function addRow() {
+    var table = document.querySelector("table");
+    var cols = table.rows[0].cells.length;
+    var newRow = "<tr>";
+    for (var i = 0; i < cols; i++) {
+        newRow += "<td>Cell</td>";
+    }
+    newRow += "</tr>";
+    table.innerHTML += newRow;
+}
