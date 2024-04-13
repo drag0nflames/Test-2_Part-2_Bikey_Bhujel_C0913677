@@ -33,8 +33,9 @@ function addRow() {
     var table = document.querySelector("table");
     var cols = table.rows[0].cells.length;
     var newRow = "<tr>";
+    var newRowIdx = table.rows.length; // Get the index of the new row
     for (var i = 0; i < cols; i++) {
-        newRow += "<td>Cell</td>";
+        newRow += "<td>Cell " + newRowIdx + i + "</td>"; // Include cell coordinates
     }
     newRow += "</tr>";
     table.innerHTML += newRow;
