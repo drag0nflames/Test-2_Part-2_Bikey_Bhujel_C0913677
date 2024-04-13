@@ -10,7 +10,7 @@ function generateTable() {
     for (var i = 0; i < rows; i++) {
         tableHTML += "<tr>";
         for (var j = 0; j < cols; j++) {
-            tableHTML += "<td>Cell " + i + j + "</td>"; 
+            tableHTML += "<td>Cell " + i + "," + j + "</td>"; 
         }
         tableHTML += "</tr>";
     }
@@ -24,7 +24,7 @@ function addColumn() {
     var rows = document.querySelectorAll("table tr");
     var newColIndex = rows[0].querySelectorAll("td").length; // Get the index of the new column
     for (var i = 0; i < rows.length; i++) {
-        rows[i].innerHTML += "<td>Cell " + i + newColIndex + "</td>"; // Include cell coordinates
+        rows[i].innerHTML += "<td>Cell " + i + ","+newColIndex + "</td>"; // Include cell coordinates
     }
 }
 
@@ -35,7 +35,7 @@ function addRow() {
     var newRow = "<tr>";
     var newRowIdx = table.rows.length; // Get the index of the new row
     for (var i = 0; i < cols; i++) {
-        newRow += "<td>Cell " + newRowIdx + i + "</td>"; // Include cell coordinates
+        newRow += "<td>Cell " + newRowIdx +',' +i + "</td>"; // Include cell coordinates
     }
     newRow += "</tr>";
     table.innerHTML += newRow;
