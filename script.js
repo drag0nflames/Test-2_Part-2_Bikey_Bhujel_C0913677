@@ -18,3 +18,12 @@ function generateTable() {
     document.body.innerHTML = "<button id='b2' onclick='addColumn()'>Add Column</button><button id='b3' onclick='addRow()'>Add Row</button>" + tableHTML;
     
 }
+
+// Function to add a column to the table
+function addColumn() {
+    var rows = document.querySelectorAll("table tr");
+    for (var i = 0; i < rows.length; i++) {
+        rows[i].innerHTML += "<td>Cell</td>";
+    }
+}
+
