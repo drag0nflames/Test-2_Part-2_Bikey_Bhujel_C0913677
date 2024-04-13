@@ -22,8 +22,9 @@ function generateTable() {
 // Function to add a column to the table
 function addColumn() {
     var rows = document.querySelectorAll("table tr");
+    var newColIndex = rows[0].querySelectorAll("td").length; // Get the index of the new column
     for (var i = 0; i < rows.length; i++) {
-        rows[i].innerHTML += "<td>Cell</td>";
+        rows[i].innerHTML += "<td>Cell " + i + newColIndex + "</td>"; // Include cell coordinates
     }
 }
 
